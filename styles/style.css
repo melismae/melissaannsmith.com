@@ -1,0 +1,64 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.5;
+  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.02em;
+  color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 4.0rem;
+  line-height: .9;
+}
+
+h2, h3, button, li {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h2 { font-size: 3.6rem; }
+h3 { font-size: 3.0rem; }
+h4 { font-size: 2.4rem; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-size: 1.5em;
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 1.9rem; }
+}
+
+p {
+  margin-top: 0;
+}
+
+
+
+nav li {
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+}
+
+
+
+/*sections*/
+.name {
+  text-align: right;
+}
