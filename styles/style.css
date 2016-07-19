@@ -23,15 +23,15 @@ h1 {
   line-height: .9;
 }
 
-h2, h3, button, li {
+h2, h3, button, li, .button {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-h2 { font-size: 3.6rem; }
-h3 { font-size: 3.0rem; }
-h4 { font-size: 2.4rem; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
 
 [class^="icon-"], [class*=" icon-"] {
   font-size: 1.5em;
@@ -40,20 +40,18 @@ h4 { font-size: 2.4rem; }
 /* Larger than phablet */
 @media (min-width: 550px) {
   h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 1.9rem; }
+  h2 { font-size: 2.0rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.1rem; }
 }
 
 p {
-  margin-top: 0;
+  margin: 0;
 }
 
-
-
-nav li {
+nav li, li.skill {
   display: inline-block;
-  margin: 10px 20px 10px 0;
+  margin: 10px 20px 0 0;
 }
 
 
@@ -61,4 +59,9 @@ nav li {
 /*sections*/
 .name {
   text-align: right;
+}
+
+/* lists */
+span.button {
+  margin-right: 1rem;
 }
