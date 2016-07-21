@@ -27,16 +27,16 @@ h1 {
   font-size: 4.0rem;
 }
 
-h2, h3, button, nav, .button, ul.work-section-skills {
+h2, h3, button, nav, .button, ul.work-section-skills, .skills ul {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-h2 { font-size: 1.7rem; }
-h3, h5 { font-size: 1.1rem; }
+h2 { font-size: 1.7rem; font-weight: 700}
+h3, h5 { font-size: 1.1rem; color: #444}
 h4 { font-size: 1.5rem; }
-h5 { color: #999; }
+h5 { color: #666; }
 
 p {
   margin: 0;
@@ -57,7 +57,7 @@ nav {
   font-size: .8rem;
 }
 
-nav li, li.skill, nav span {
+nav li, nav span {
   display: inline-block;
   margin: 10px 10px 0 0;
 }
@@ -144,10 +144,24 @@ button {
   padding-bottom: .45rem;
 }
 
-.work ul.work-section-resp li {
-  font-size: 0.9rem;
+.work-entry {
+  margin-bottom: 30px;
 }
 
+.work ul.work-section-resp li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.work li.skill {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #F26F65;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+/**** projects ****/
 
 
 /* lists */
@@ -181,7 +195,7 @@ span.button {
     margin-right:20px;
   }
 
-  .skills, .work {
+  .skills, .work, .projects {
     padding: 125px 0;
   }
 
