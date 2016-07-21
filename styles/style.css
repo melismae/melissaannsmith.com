@@ -8,7 +8,8 @@ body {
   font-weight: 300;
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.02em;
-  color: #333;
+  color: #353535;
+  background-color: #e8e4db;
 }
 
 header, section, footer {
@@ -119,8 +120,8 @@ button {
   background-color: #C7A399;
 }
 
-.skills h2, .work h2 {
-  padding-bottom: 20px;
+.skills h2, .work h2, .projects h2, .connect h2 {
+  margin-bottom: 20px;
 }
 
 .skills ul, .work ul {
@@ -162,7 +163,28 @@ button {
 }
 
 /**** projects ****/
+.projects {
+  background-color: #fff;
+}
 
+.projects .entry {
+  background-color: #353535;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.project-desc {
+  background-color: #e8e4db;
+  padding: 1rem;
+}
+
+.project-desc p {
+  font-size: 0.9rem;
+}
+
+/*** connect **** */
+.connect {
+  background-color: #63BFBE;
+}
 
 /* lists */
 span.button {
@@ -174,7 +196,7 @@ span.button {
 
 @media (min-width: 550px) {
   h1 { font-size: 5.0rem; }
-  h2 { font-size: 1.5rem; line-height: 1.2; text-align: center}
+  h2 { font-size: 1.5rem; line-height: 1.2; text-align: center; }
   h3, h5 { font-size: 1rem; line-height: 1.2;}
   h4 { font-size: 1.7rem; line-height: 1.3}
 
@@ -188,14 +210,17 @@ span.button {
   .story h2 {
     text-align: left;
   }
+
   .icons span {
     margin-left: .5rem;
   }
   nav li {
     margin-right:20px;
   }
-
-  .skills, .work, .projects {
+  .skills h2, .work h2, .projects h2, .connect h2 {
+    margin-bottom: 40px;
+  }
+  .skills, .work, .projects, .connect {
     padding: 125px 0;
   }
 
