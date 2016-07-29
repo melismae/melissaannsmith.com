@@ -1,0 +1,26 @@
+{
+  "name": "melissaannsmith.com",
+  "version": "1.0.0",
+  "description": "Because my computer's hard drive keeps crashing and this is what github is for. WIP.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melismae/melissaannsmith.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melismae/melissaannsmith.com/issues"
+  },
+  "homepage": "https://github.com/melismae/melissaannsmith.com#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {}
+}
