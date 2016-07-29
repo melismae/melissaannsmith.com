@@ -185,5 +185,14 @@ body {
                 }
             }
         }
+        &.work {
+            h2 {
+                @extend .skills h2
+            }
+            .row .work-entry {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 }
