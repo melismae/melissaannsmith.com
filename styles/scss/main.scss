@@ -51,7 +51,7 @@ body {
     }
 
     h5 {
-        color: $lightgrey;
+        color: $medgrey;
     }
 
     p {
@@ -186,20 +186,73 @@ body {
             }
         }
         &.work {
+            padding: 125px 0;
             h2 {
                 margin-bottom: 20px;
                 text-align:center;
             }
             .row {
                 display: flex;
+                &.work-entry {
+                    margin-bottom: 30px;
+                }
                 .work-logo {
                     width: 20%;
                     text-align: center;
+                    padding-right: 1%;
                 }
                 .description {
-                    width: 80%;
+                    width: 79%;
+                    .company {
+                        width: 70%;
+                    }
+                    .location {
+                        width: 30%;
+                    }
+                    ul {
+                        padding-left: 0;
+                    }
+                    ul.work-section-resp li {
+                        font-size: 0.9em;
+                        margin-bottom: .5em;
+                        list-style: none;
+                    }
+                    ul.work-section-skills {
+                        line-height: 1.1;
+                        li.skill {
+                            display: inline-block;
+                            margin: 0 10px 0 0;
+                            color: $pink;
+                            font-size: 0.7em;
+                            line-height: 1;
+                        }
+                    }
                 }
             }
+        }
+        &.projects {
+            padding: 125px 0;
+            background-color: $white;
+            h2 {
+                margin-bottom: 20px;
+                text-align:center;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                .col {
+                    width: 29.3%;
+                    padding: 2%;
+                    .entry {
+                        padding: 2%;
+                        background-color: $aqua;
+                        img {
+                            max-width:100%;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

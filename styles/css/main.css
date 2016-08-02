@@ -429,7 +429,7 @@ body {
     font-size: 1.7em;
     line-height: 1.3; }
   body h5 {
-    color: #eeeeee; }
+    color: #666666; }
   body p {
     margin: 0;
     padding-top: 0.3em;
@@ -537,14 +537,56 @@ body {
             font-size: .9em;
             color: #444;
             margin-bottom: 1em; }
-  body .section.work h2 {
-    margin-bottom: 20px;
-    text-align: center; }
-  body .section.work .row {
-    display: -ms-flexbox;
-    display: flex; }
-    body .section.work .row .work-logo {
-      width: 20%;
+  body .section.work {
+    padding: 125px 0; }
+    body .section.work h2 {
+      margin-bottom: 20px;
       text-align: center; }
-    body .section.work .row .description {
-      width: 80%; }
+    body .section.work .row {
+      display: -ms-flexbox;
+      display: flex; }
+      body .section.work .row.work-entry {
+        margin-bottom: 30px; }
+      body .section.work .row .work-logo {
+        width: 20%;
+        text-align: center;
+        padding-right: 1%; }
+      body .section.work .row .description {
+        width: 79%; }
+        body .section.work .row .description .company {
+          width: 70%; }
+        body .section.work .row .description .location {
+          width: 30%; }
+        body .section.work .row .description ul {
+          padding-left: 0; }
+        body .section.work .row .description ul.work-section-resp li {
+          font-size: 0.9em;
+          margin-bottom: .5em;
+          list-style: none; }
+        body .section.work .row .description ul.work-section-skills {
+          line-height: 1.1; }
+          body .section.work .row .description ul.work-section-skills li.skill {
+            display: inline-block;
+            margin: 0 10px 0 0;
+            color: #F26F65;
+            font-size: 0.7em;
+            line-height: 1; }
+  body .section.projects {
+    padding: 125px 0;
+    background-color: #ffffff; }
+    body .section.projects h2 {
+      margin-bottom: 20px;
+      text-align: center; }
+    body .section.projects .row {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      body .section.projects .row .col {
+        width: 29.3%;
+        padding: 2%; }
+        body .section.projects .row .col .entry {
+          padding: 2%;
+          background-color: #63BFBE; }
+          body .section.projects .row .col .entry img {
+            max-width: 100%; }
