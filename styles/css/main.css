@@ -514,7 +514,7 @@ body {
         padding: 2%;
         margin-top: 118px; }
   body .section.skills {
-    padding: 75px 0;
+    padding: 100px 0;
     background-color: #C7A399; }
     body .section.skills h2 {
       margin-bottom: 20px;
@@ -537,3 +537,14 @@ body {
             font-size: .9em;
             color: #444;
             margin-bottom: 1em; }
+  body .section.work h2 {
+    margin-bottom: 20px;
+    text-align: center; }
+  body .section.work .row {
+    display: -ms-flexbox;
+    display: flex; }
+    body .section.work .row .work-logo {
+      width: 20%;
+      text-align: center; }
+    body .section.work .row .description {
+      width: 80%; }
