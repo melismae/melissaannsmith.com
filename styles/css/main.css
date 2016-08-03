@@ -401,7 +401,6 @@ body {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 1em;
   font-weight: 300;
-  line-height: 1.6;
   letter-spacing: 0.02em;
   color: #353535;
   background-color: #e8e4db; }
@@ -420,7 +419,9 @@ body {
     font-weight: 300; }
   body h2 {
     font-size: 1.5em;
-    font-weight: 700; }
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px; }
   body h3, body h5 {
     font-size: 0.9em;
     color: #444444;
@@ -433,7 +434,8 @@ body {
   body p {
     margin: 0;
     padding-top: 0.3em;
-    letter-spacing: 0.03em; }
+    letter-spacing: 0.03em;
+    line-height: 1.5; }
   body button, body .button {
     display: inline-block;
     height: 38px;
@@ -467,7 +469,7 @@ body {
     margin: 0 auto;
     box-sizing: border-box; }
   body .section.header {
-    height: 51px;
+    height: 45px;
     background-color: #ffffff;
     position: fixed;
     z-index: 2;
@@ -513,12 +515,12 @@ body {
         flex-basis: 50%;
         padding: 2%;
         margin-top: 118px; }
+        body .section.about .row .story h2 {
+          text-align: left;
+          margin-bottom: 0; }
   body .section.skills {
     padding: 100px 0;
     background-color: #C7A399; }
-    body .section.skills h2 {
-      margin-bottom: 20px;
-      text-align: center; }
     body .section.skills .row {
       display: -ms-flexbox;
       display: flex;
@@ -539,9 +541,6 @@ body {
             margin-bottom: 1em; }
   body .section.work {
     padding: 125px 0; }
-    body .section.work h2 {
-      margin-bottom: 20px;
-      text-align: center; }
     body .section.work .row {
       display: -ms-flexbox;
       display: flex; }
@@ -573,10 +572,7 @@ body {
             line-height: 1; }
   body .section.projects {
     padding: 125px 0;
-    background-color: #ffffff; }
-    body .section.projects h2 {
-      margin-bottom: 20px;
-      text-align: center; }
+    background-color: #eeeeee; }
     body .section.projects .row {
       display: -ms-flexbox;
       display: flex;
@@ -585,8 +581,21 @@ body {
       body .section.projects .row .col {
         width: 29.3%;
         padding: 2%; }
-        body .section.projects .row .col .entry {
-          padding: 2%;
-          background-color: #63BFBE; }
-          body .section.projects .row .col .entry img {
+        body .section.projects .row .col .project-img {
+          line-height: 0; }
+          body .section.projects .row .col .project-img img {
             max-width: 100%; }
+        body .section.projects .row .col .project-desc {
+          padding: 7%;
+          background-color: #444444;
+          color: #eeeeee; }
+          body .section.projects .row .col .project-desc h3 {
+            color: #F26F65; }
+          body .section.projects .row .col .project-desc p {
+            font-size: 0.9em; }
+            body .section.projects .row .col .project-desc p a {
+              color: #C7A399;
+              text-decoration: none; }
+  body .section.connect {
+    background-color: #0B3059;
+    padding: 125px 0; }
