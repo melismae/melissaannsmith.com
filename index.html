@@ -9,10 +9,11 @@
 
     <title>Melissa Smith - Developer</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato|Montserrat|PT+Serif|Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="styles/css/icons.css">
     <link rel="stylesheet" href="styles/css/main.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- color theme can be found at https://color.adobe.com/Miami-Deco-color-theme-8348960/ -->
 
   </head>
@@ -20,11 +21,11 @@
     <div class="section header">
       <div class="container">
       <div class="row">
-        <span class="nav-name"><a href="#">MS</a></span>
-        <ul class="u-pull-right">
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Connect</a></li>
+        <span id="nav-name" onclick="sectionScroll(this)">MS</span>
+        <ul class="nav-sel">
+          <li id="work-nav" onclick="sectionScroll(this)">Work</li>
+          <li id="projects-nav" onclick="sectionScroll(this)">Projects</li>
+          <li id="connect-nav" onclick="sectionScroll(this)">Connect</li>
         </ul>
       </div>
       </div>
@@ -36,23 +37,27 @@
             <h1>Melissa<br> Smith</h1>
             <h4>Web Developer</h4>
             <div class="icons">
-              <span class="icon-mail"></span>
-              <span class="icon-github"></span>
-              <span class="icon-linkedin"></span>
+              <a href='mailto&#58;%&#54;&#68;%65lism&#97;e%40%&#54;7%&#54;D&#97;%69&#108;&#46;%63o%&#54;D'><span class="icon-mail"></span></a>
+              <a href="https://www.github.com/melismae" target="_blank"><span class="icon-github"></span></a>
+              <a href="https://www.linkedin.com/in/smithmelissaann" target="_blank"><span class="icon-linkedin"></span></a>
             </div>
           </div>
           <div class="story">
-            <h2>About</h2>
-            <h3>The Short Version | The Long Version</h3>
-            <p>I'm a Portland-based web developer with full-stack experience and a recent front-end focus in React with Redux. I love working across teams to find the best user-friendly development solutions.</p>
-            <button>My Work</button>
+            <h2><i>About</i></h2>
+            <h3><span id="short">The Short Version</span> | <span id="long">The Long Version</span></h3>
+            <p>I'm a Portland-based <span class="long-version"> (via Los Angeles, via Blacksburg, <a href="https://www.youtube.com/watch?v=vEFN_14aElU" target=“_blank”>via Chicago</a>)</span> web developer with full-stack and startup experience and a recent front-end focus in ReactJS. I love collaborating across teams to build creative, scalable, user-friendly products and tackling new and exciting development challenges.</p>
+            <p class="long-version">I moved into web development from a career in communications, where my specialties were in design, web content management, and social media. Because of this background, I’m a valuable asset to dev teams for UI/UX decisions and an empathetic tech ambassador to other teams.</p>
+            <p class="long-version">I learned basic HTML &amp; CSS while writing my English master’s thesis on Lord Byron...<a href="mailto&#58;%&#54;&#68;%65lism&#97;e%40%&#54;7%&#54;D&#97;%69&#108;&#46;%63o%&#54;D?subject=What%20is%20the%20deal%20with%20the%20Byron%20thesis">feel free to ask me about it!</a></p>
+            <button onclick="sectionScroll(this)" id="work-button">My Work</button>
           </div>
         </div>
       </div>
     </div>
     <div class="section skills">
       <div class="container">
-        <h2>Skills</h2>
+        <div class="row">
+            <h2><i>Skills</i></h2>
+        </div>
         <div class="row">
           <div class="column">
             <ul class="skill-section-list">
@@ -85,7 +90,9 @@
     </div>
     <div class="section work">
       <div class="container">
-        <h2>Work</h2>
+          <div class="row">
+              <h2><i>Work</i></h2>
+          </div>
         <div class="row work-entry">
           <div class="work-logo">
             <img src="images/bouqs_logo.png" />
@@ -212,7 +219,9 @@
     </div>
     <div class="section projects">
       <div class="container">
-          <h2>Projects</h2>
+          <div class="row">
+              <h2><i>Projects</i></h2>
+          </div>
         <div class="row">
           <div class="col">
               <div class="project-img">
@@ -273,9 +282,54 @@
     </div>
     <div class="section connect">
       <div class="container">
-          <h2>Connect</h2>
-
+          <div class="row">
+              <h2><i>Connect</i></h2>
+        </div>
+          <p>Find me in the usual places, or <a href="images/melissa-smith-cv.pdf" target="_blank">download my CV</a>.</p>
+          <div class="icons">
+            <a href='mailto&#58;%&#54;&#68;%65lism&#97;e%40%&#54;7%&#54;D&#97;%69&#108;&#46;%63o%&#54;D'><span class="icon-mail"></span></a>
+            <a href="https://www.github.com/melismae" target="_blank"><span class="icon-github"></span></a>
+            <a href="https://www.linkedin.com/in/smithmelissaann" target="_blank"><span class="icon-linkedin"></span></a>
+          </div>
       </div>
     </div>
+    <script>
+        $( "#long" ).click(function() {
+            $("#long").addClass('selected');
+            $("#short").removeClass('selected');
+            $( ".long-version" ).fadeIn("slow");
+        });
+        $( "#short" ).click(function() {
+            $("#short").addClass('selected');
+            $("#long").removeClass('selected');
+            $( ".long-version" ).fadeOut("slow");
+        });
+
+        var navWork = $(".work").offset().top;
+        var navProjects = $(".projects").offset().top;
+        var navConnect = $(".connect").offset().top;
+
+        function sectionScroll(el) {
+            $('#nav-name, ul.nav-sel li').removeClass("selected");
+            $(el).addClass('selected');
+            var elId = $(el).attr('id');
+            var scrollVal = 0;
+            if (elId === "work-nav" || elId === "work-button") {
+                scrollVal = navWork;
+            } else if (elId === "projects-nav") {
+                scrollVal = navProjects;
+            } else if (elId === "connect-nav") {
+                scrollVal = navConnect;
+            }
+            $('html, body').animate({
+                scrollTop: scrollVal
+            }, 750);
+            window.setTimeout(function(){
+                $(el).removeClass("selected");
+            }, 2000);
+        }
+
+
+    </script>
   </body>
 </html>

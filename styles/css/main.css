@@ -413,15 +413,20 @@ body {
     font-family: "Abril Fatface", Georgia, serif;
     line-height: .9;
     font-size: 5em; }
-  body h2, body h3, body button, body .header, body .button, body ul.work-section-skills, body .skills ul {
+  body h3, body button, body .header, body .button, body ul.work-section-skills, body .skills ul {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 300; }
   body h2 {
+    margin: 0 auto;
+    text-transform: uppercase;
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 900;
     text-align: center;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+    background-color: #ffffff;
+    padding: 0.4em; }
   body h3, body h5 {
     font-size: 0.9em;
     color: #444444;
@@ -453,15 +458,15 @@ body {
     box-sizing: border-box;
     transition: 0.2s;
     font-size: 0.7em;
-    letter-spacing: 0.08em; }
+    letter-spacing: 0.08em;
+    outline: 0; }
     body button:hover, body .button:hover {
       transition: 0.2s;
       background-color: #ffffff;
-      border-color: #F26F65; }
-  body [class^="icon-"], body [class*=" icon-"] {
-    font-size: 1.5em; }
-  body .icons {
-    margin-top: 10px; }
+      border-color: #F26F65;
+      outline: 0; }
+    body button:focus, body .button:focus {
+      outline: 0; }
   body .section .container {
     position: relative;
     width: 80%;
@@ -488,16 +493,14 @@ body {
       body .section.header .row li, body .section.header .row span {
         display: inline-block;
         margin: 10px 10px 0 0; }
-      body .section.header .row li, body .section.header .row .nav-name {
+      body .section.header .row li, body .section.header .row #nav-name {
         background-color: #eeeeee;
-        padding: 0.3em; }
-        body .section.header .row li:hover, body .section.header .row .nav-name:hover {
-          border-bottom: 1px #F26F65 solid; }
-        body .section.header .row li a, body .section.header .row .nav-name a {
-          color: inherit;
-          text-decoration: none; }
-          body .section.header .row li a:hover, body .section.header .row .nav-name a:hover {
-            color: inherit; }
+        padding: 0.3em;
+        transition: 0.2s; }
+        body .section.header .row li:hover, body .section.header .row li.selected, body .section.header .row #nav-name:hover, body .section.header .row #nav-name.selected {
+          transition: 0.2s;
+          cursor: pointer;
+          border-bottom: 1px #63BFBE solid; }
       body .section.header .row li:last-of-type {
         margin-right: 0; }
   body .section.about {
@@ -510,14 +513,44 @@ body {
         -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
         padding: 2%; }
+        body .section.about .row .name .icons {
+          margin-top: 10px; }
+          body .section.about .row .name .icons a {
+            color: #353535;
+            text-decoration: none; }
+            body .section.about .row .name .icons a:hover {
+              color: #63BFBE;
+              transition: 0.3s; }
+            body .section.about .row .name .icons a [class^="icon-"], body .section.about .row .name .icons a [class*=" icon-"] {
+              font-size: 1.5em;
+              margin-right: 0.3em; }
       body .section.about .row .story {
         -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
         padding: 2%;
-        margin-top: 118px; }
+        margin-top: 137px; }
         body .section.about .row .story h2 {
           text-align: left;
-          margin-bottom: 0; }
+          width: 100px;
+          margin: 0;
+          margin-bottom: 5px; }
+        body .section.about .row .story h3 {
+          cursor: pointer; }
+          body .section.about .row .story h3 span.selected {
+            border-bottom: 1px solid #63BFBE; }
+        body .section.about .row .story p {
+          transition: 0.3s;
+          padding-bottom: .7em; }
+          body .section.about .row .story p a {
+            color: #444444;
+            text-decoration: none; }
+            body .section.about .row .story p a:hover {
+              color: #63BFBE; }
+            body .section.about .row .story p a:visited {
+              color: #63BFBE; }
+        body .section.about .row .story p.long-version, body .section.about .row .story span.long-version {
+          display: none;
+          transition: 0.3s; }
   body .section.skills {
     padding: 100px 0;
     background-color: #C7A399; }
@@ -540,7 +573,8 @@ body {
             color: #444;
             margin-bottom: 1em; }
   body .section.work {
-    padding: 125px 0; }
+    padding: 125px 0;
+    background-color: #eeeeee; }
     body .section.work .row {
       display: -ms-flexbox;
       display: flex; }
@@ -571,8 +605,7 @@ body {
             font-size: 0.7em;
             line-height: 1; }
   body .section.projects {
-    padding: 125px 0;
-    background-color: #eeeeee; }
+    padding: 125px 0; }
     body .section.projects .row {
       display: -ms-flexbox;
       display: flex;
@@ -597,5 +630,25 @@ body {
               color: #C7A399;
               text-decoration: none; }
   body .section.connect {
-    background-color: #0B3059;
-    padding: 125px 0; }
+    background-color: #63BFBE;
+    padding: 125px 0;
+    text-align: center; }
+    body .section.connect p a {
+      color: #353535;
+      text-decoration: none; }
+      body .section.connect p a:hover {
+        border-bottom: 1px solid #eeeeee;
+        cursor: pointer;
+        transition: 0.3s; }
+    body .section.connect .icons {
+      margin-top: 10px; }
+      body .section.connect .icons a {
+        color: #353535;
+        text-decoration: none; }
+        body .section.connect .icons a:hover {
+          color: #eeeeee;
+          transition: 0.3s;
+          cursor: pointer; }
+        body .section.connect .icons a [class^="icon-"], body .section.connect .icons a [class*=" icon-"] {
+          font-size: 2em;
+          margin: 0.2em; }
