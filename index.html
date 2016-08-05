@@ -9,46 +9,46 @@
 
     <title>Melissa Smith - Developer</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lato|Montserrat|PT+Serif|Playfair+Display" rel="stylesheet">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/skeleton.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Montserrat|Lato:300,400,700|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/icons.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- color theme can be found at https://color.adobe.com/Miami-Deco-color-theme-8348960/ -->
 
   </head>
   <body>
     <div class="section header">
       <div class="container">
-        <nav>
-          <div class="row">
-            <span class="nav-name"><a href="#">MS</a></span>
-            <ul class="u-pull-right">
-              <li><a href="#">Work</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Connect</a></li>
-            </ul>
-          </div>
-        </nav>
+      <div class="row">
+        <span id="nav-name" onclick="sectionScroll(this)">MS</span>
+        <ul class="nav-sel">
+          <li id="work-nav" onclick="sectionScroll(this)">Work</li>
+          <li id="projects-nav" onclick="sectionScroll(this)">Projects</li>
+          <li id="connect-nav" onclick="sectionScroll(this)">Connect</li>
+        </ul>
+      </div>
       </div>
     </div>
     <div class="section about">
       <div class="container">
         <div class="row">
-          <div class="one-half column name">
+          <div class="name">
             <h1>Melissa<br> Smith</h1>
             <h4>Web Developer</h4>
             <div class="icons">
-              <span class="icon-mail"></span>
-              <span class="icon-github"></span>
-              <span class="icon-linkedin"></span>
+              <a href='mailto&#58;%&#54;&#68;%65lism&#97;e%40%&#54;7%&#54;D&#97;%69&#108;&#46;%63o%&#54;D'><span class="icon-mail"></span></a>
+              <a href="https://www.github.com/melismae" target="_blank"><span class="icon-github"></span></a>
+              <a href="https://www.linkedin.com/in/smithmelissaann" target="_blank"><span class="icon-linkedin"></span></a>
             </div>
           </div>
-          <div class="one-half column story">
-            <h2>About</h2>
-            <h3>The Short Version | The Long Version</h3>
-            <p>I'm a Portland-based web developer with full-stack experience and a recent front-end focus in React with Redux. I love working across teams to find the best user-friendly development solutions.</p>
-            <button>My Work</button>
+          <div class="story">
+            <h2><i>About</i></h2>
+            <h3><span id="short">The Short Version</span> | <span id="long">The Long Version</span></h3>
+            <p>I'm a Portland-based <span class="long-version"> (via Los Angeles, via Blacksburg, <a href="https://www.youtube.com/watch?v=vEFN_14aElU" target=“_blank”>via Chicago</a>)</span> web developer with full-stack and startup experience and a recent front-end focus in ReactJS. I love collaborating across teams to build creative, scalable, user-friendly products and tackling new and exciting development challenges.</p>
+            <p class="long-version">I moved into web development from a career in communications, where my specialties were in design, web content management, and social media. Because of this background, I’m a valuable asset to dev teams for UI/UX decisions and an empathetic tech ambassador to other teams.</p>
+            <p class="long-version">I learned basic HTML &amp; CSS while writing my English master’s thesis on Lord Byron...<a href="mailto&#58;%&#54;&#68;%65lism&#97;e%40%&#54;7%&#54;D&#97;%69&#108;&#46;%63o%&#54;D?subject=What%20is%20the%20deal%20with%20the%20Byron%20thesis">feel free to ask me about it!</a></p>
+            <button onclick="sectionScroll(this)" id="work-button">My Work</button>
           </div>
         </div>
       </div>
@@ -56,10 +56,10 @@
     <div class="section skills">
       <div class="container">
         <div class="row">
-          <h2>Skills</h2>
+            <h2><i>Skills</i></h2>
         </div>
         <div class="row">
-          <div class="one-third column">
+          <div class="column">
             <ul class="skill-section-list">
               <li>HTML &amp; CSS</li>
               <li>Javascript &amp; jQuery</li>
@@ -69,7 +69,7 @@
               <li>WordPress</li>
             </ul>
           </div>
-          <div class="one-third column">
+          <div class="column">
             <ul class="skill-section-list">
               <li>LAMP stack <br>(Linux, Apache, MySQL, PHP)</li>
               <li>Version Control (Git &amp; Github)</li>
@@ -77,7 +77,7 @@
               <li>Productivity &amp; Agile: Slack, Jira, Confluence, Redmine</li>
             </ul>
           </div>
-          <div class="one-third column">
+          <div class="column">
             <ul class="skill-section-list">
               <li>Photoshop &amp; InDesign</li>
               <li>A/B Testing (Optimizely)</li>
@@ -90,20 +90,20 @@
     </div>
     <div class="section work">
       <div class="container">
-        <div class="row">
-          <h2>Work</h2>
-        </div>
-        <div class="row work-entry">
-          <div class="three columns">
-            <img src="images/bouqs_logo.png" class="u-max-full-width" />
+          <div class="row">
+              <h2><i>Work</i></h2>
           </div>
-          <div class="nine columns">
+        <div class="row work-entry">
+          <div class="work-logo">
+            <a href="https://www.thebouqs.com" target="_blank"><img src="images/bouqs_logo.png" /></a>
+          </div>
+          <div class="description">
             <div class="row">
-              <div class="two-thirds column">
+              <div class="company">
                 <h3>The Bouqs Company</h3>
                 <h3>Web Developer</h3>
               </div>
-              <div class="one-third column">
+              <div class="location">
                 <h5><i>Venice, CA</i></h5>
                 <h5><i>Nov 2014&ndash;April 2016</i></h5>
               </div>
@@ -130,21 +130,21 @@
               <li class="skill">Git &amp; Github</li>
               <li class="skill">Agile &amp; Scrum with Jira</li>
               <li class="skill">Jenkins</li>
-              <li class="skill">AWS</li>
+              <li class="skill">AWS (basic)</li>
             </ul>
           </div>
         </div>
         <div class="row work-entry">
-          <div class="three columns">
-            <img src="images/levitt_logo.png" class="u-max-full-width" />
+          <div class="work-logo">
+            <a href="https://levitt.org/" target="_blank"><img src="images/levitt_logo.png" /></a>
           </div>
-          <div class="nine columns">
+          <div class="description">
             <div class="row">
-              <div class="two-thirds column">
+              <div class="company">
                 <h3>Levitt Foundation</h3>
                 <h3>Communications Associate</h3>
               </div>
-              <div class="one-third column">
+              <div class="location">
                 <h5><i>Los Angeles, CA</i></h5>
                 <h5><i>Sept 2013&ndash;July 2014</i></h5>
               </div>
@@ -165,16 +165,16 @@
           </div>
         </div>
         <div class="row work-entry">
-          <div class="three columns">
-            <img src="images/Virginia_Tech_logo.png" class="u-max-full-width" />
+          <div class="work-logo">
+            <a href="http://www.oired.vt.edu/ipmil/" target="_blank"><img src="images/Virginia_Tech_logo.png" /></a>
           </div>
-          <div class="nine columns">
+          <div class="description">
             <div class="row">
-              <div class="two-thirds column">
+              <div class="company">
                 <h3>IPM Innovation Lab at Virginia Tech</h3>
                 <h3>Writer/Editor</h3>
               </div>
-              <div class="one-third column">
+              <div class="location">
                 <h5><i>Blacksburg, VA</i></h5>
                 <h5><i>July 2011&ndash;July 2013</i></h5>
               </div>
@@ -192,16 +192,16 @@
           </div>
         </div>
         <div class="row work-entry">
-          <div class="three columns">
-            <img src="images/aic_gray_logo.png" class="u-max-full-width" />
+          <div class="work-logo">
+            <a href="http://www.artic.edu/" target="_blank"><img src="images/aic_gray_logo.png" /></a>
           </div>
-          <div class="nine columns">
+          <div class="description">
             <div class="row">
-              <div class="two-thirds column">
+              <div class="company">
                 <h3>The Art Institute of Chicago</h3>
                 <h3>Communications Assistant</h3>
               </div>
-              <div class="one-third column">
+              <div class="location">
                 <h5><i>Chicago, IL</i></h5>
                 <h5><i>Aug 2006&ndash;July 2008</i></h5>
               </div>
@@ -219,75 +219,122 @@
     </div>
     <div class="section projects">
       <div class="container">
+          <div class="row">
+              <h2><i>Projects</i></h2>
+          </div>
         <div class="row">
-          <h2>Projects</h2>
-        </div>
-        <div class="row">
-          <div class="one-third column entry">
-            <div class="row">
-              <img src="images/gibbler.jpg" class="u-max-full-width" />
+          <div class="col">
+              <div class="project-img">
+                  <img src="images/gibbler.jpg" />
+              </div>
               <div class="project-desc">
                 <h3>The Bouqs</h3>
                 <p>Developed end-to-end features and other solutions, including <a href="https://www.thebouqs.com/business-gifts">multiple landing pages</a>, <a href="http://milled.com/thebouqs-com">emails</a>, and updating and migrating the <a href="https://www.thebouqs.com/blog/">blog</a>.</p>
-              </div>
             </div>
           </div>
-          <div class="one-third column entry">
-            <div class="row">
-              <img src="http://placehold.it/300x250" class="u-max-full-width" />
+          <div class="col">
+              <div class="project-img">
+                  <img src="http://placehold.it/600x500" />
+              </div>
               <div class="project-desc">
                 <h3>Email Design</h3>
                 <p>As a freelancer, I've designed and developed responsive email solutions, creating reusable templates in MailChimp. Currently interested in Foundation for Emails, and I always rely on Litmus for testing.</p>
-              </div>
             </div>
           </div>
-          <div class="one-third column entry">
-            <div class="row">
-              <img src="http://placehold.it/300x250" class="u-max-full-width" />
+          <div class="col">
+              <div class="project-img">
+                  <img src="http://placehold.it/600x500" />
+              </div>
               <div class="project-desc">
                 <h3>Design</h3>
                 <p>Before moving in to web development, I was versatile graphic designer handling formal publications and document layouts like conference programs, government reports, and sponsorship decks as well as concert posters, social media graphics, ads, and more.</p>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="one-third column entry">
-            <div class="row">
-              <img src="images/code_sync.jpg" class="u-max-full-width" />
+          <div class="col">
+              <div class="project-img">
+                  <img src="images/code_sync.jpg" />
+              </div>
               <div class="project-desc">
                 <h3>CodeSync</h3>
                 <p>A very early project, collaborating on web design and front-end for CodeSync using Foundation with Sass (Ruby on Rails backend by another developer).</p>
               </div>
-            </div>
           </div>
-          <div class="one-third column entry">
-            <div class="row">
-              <img src="http://placehold.it/300x250" class="u-max-full-width" />
+          <div class="col">
+              <div class="project-img">
+                  <img src="http://placehold.it/600x500" />
+              </div>
               <div class="project-desc">
                 <h3>Gibblervision</h3>
                 <p>Final project for General Assembly's Front-End Web Development Course using a horizontal scrolling quiz, jQuery &amp; Javascript. Artwork/video stills created with Tachyons+ analog video gear.</p>
               </div>
-            </div>
           </div>
-          <div class="one-third column entry">
-            <div class="row">
-              <img src="http://placehold.it/300x250" class="u-max-full-width" />
+          <div class="col">
+              <div class="project-img">
+                  <img src="http://placehold.it/600x500" />
+              </div>
               <div class="project-desc">
                 <h3>Design</h3>
                 <p>Before moving in to web development, I was versatile graphic designer handling formal publications and document layouts like conference programs, government reports, and sponsorship decks as well as concert posters, social media graphics, ads, and more. I love bringing this background into my current work.</p>
               </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="section connect">
-      <div class="container">
-        <div class="row">
-          <h2>Connect</h2>
+        <div class="container">
+            <div class="row">
+                <h2><i>Connect</i></h2>
+            </div>
+            <div class="row">
+
+                <p>Find me in the usual places, or <a href="images/melissa-smith-cv.pdf" target="_blank">download&nbsp;my&nbsp;CV</a>.</p>
+            </div>
+            <div class="row">
+                <div class="icons">
+                    <a href='mailto&#58;%&#54;&#68;%65lism&#97;e%40%&#54;7%&#54;D&#97;%69&#108;&#46;%63o%&#54;D'><span class="icon-mail"></span></a>
+                    <a href="https://www.github.com/melismae" target="_blank"><span class="icon-github"></span></a>
+                    <a href="https://www.linkedin.com/in/smithmelissaann" target="_blank"><span class="icon-linkedin"></span></a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <script>
+        $( "#long" ).click(function() {
+            $("#long").addClass('selected');
+            $("#short").removeClass('selected');
+            $( ".long-version" ).fadeIn("slow");
+        });
+        $( "#short" ).click(function() {
+            $("#short").addClass('selected');
+            $("#long").removeClass('selected');
+            $( ".long-version" ).fadeOut("slow");
+        });
+
+        var navWork = $(".work").offset().top;
+        var navProjects = $(".projects").offset().top;
+        var navConnect = $(".connect").offset().top;
+
+        function sectionScroll(el) {
+            $('#nav-name, ul.nav-sel li').removeClass("selected");
+            $(el).addClass('selected');
+            var elId = $(el).attr('id');
+            var scrollVal = 0;
+            if (elId === "work-nav" || elId === "work-button") {
+                scrollVal = navWork;
+            } else if (elId === "projects-nav") {
+                scrollVal = navProjects;
+            } else if (elId === "connect-nav") {
+                scrollVal = navConnect;
+            }
+            $('html, body').animate({
+                scrollTop: scrollVal
+            }, 750);
+            window.setTimeout(function(){
+                $(el).removeClass("selected");
+            }, 2000);
+        }
+
+
+    </script>
   </body>
 </html>
