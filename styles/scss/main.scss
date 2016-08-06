@@ -3,9 +3,9 @@
 @import "fonts";
 
 // breakpoints
-$breakpoint-mobile: 550px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 641px;
+$breakpoint-desktop: 801px;
+$breakpoint-full: 1024px;
 
 html {
     font-size: 100%;
@@ -51,7 +51,7 @@ body {
     }
 
     h3 {
-        font-size: 0.9em;
+        font-size: 0.8em;
         color: $darkgrey;
         line-height: 1.4;
         font-weight: 400;
@@ -162,7 +162,7 @@ body {
                 flex-flow: row wrap;
                 .name {
                     text-align: left;
-                    flex-basis: 96%;
+                    width: 96%;
                     padding: 2%;
                     .icons {
                         margin-top: 10px;
@@ -182,7 +182,7 @@ body {
                     }
                 }
                 .story {
-                    flex-basis: 96%;
+                    width: 96%;
                     padding: 2%;
                     margin-top: 15px;
                     h2 {
@@ -309,6 +309,7 @@ body {
                         padding: 7%;
                         background-color: $darkgrey;
                         color: $lightgrey;
+                        line-height: 0;
                         h3 {
                             color: $pink;
                         }
@@ -347,7 +348,7 @@ body {
                     }
                 }
                 .icons {
-                    margin: 10px 2%;
+                    margin: 10px 1%;
                     float: left;
                     a {
                         color: $fontcolor;
@@ -368,28 +369,109 @@ body {
     }
 }
 
+@media (min-width: $breakpoint-tablet) {
+    body {
+        h1 {
+            font-size: 3.7em;
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 1.3em;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 0.8em;
+        }
+
+        h4 {
+            font-size: 1.4em;
+            text-align: right;
+        }
+
+        h5 {
+            font-size: 0.8em;
+        }
+
+        .section {
+            &.about {
+                padding: 75px 0 35px;
+                .row {
+                    .name {
+                        text-align: right;
+                        width: 40%;
+                        padding: 2%;
+                    }
+                    .story {
+                        width: 52%;
+                        padding: 2%;
+                        margin-top: 65px;
+                    }
+                }
+            }
+            &.skills {
+                .row {
+                    .column {
+                        width: 29.3%;
+                        padding: 0% 2%;
+                        ul {
+                            li {
+                                font-size: .8em;
+                            }
+                        }
+                    }
+                }
+            }
+            &.work {
+                .row {
+                    .work-logo {
+                        display:block;
+                        width: 20%;
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                    .description {
+                        width: 76%;
+                        margin-left: 4%;
+                        .company {
+                            width: 56%;
+                            margin-right: 4%;
+                        }
+                        .location {
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+            &.projects {
+                .row {
+                    .col {
+                        width: 46%;
+                        padding: 2%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @media (min-width: $breakpoint-desktop) {
     body {
-        font-size: 1em;
-        letter-spacing: 0.02em;
 
         h1 {
-            line-height: .9;
             font-size: 5em;
         }
 
         h2 {
             font-size: 1.5em;
-            text-align: center;
-            margin-bottom: 20px;
-            letter-spacing: 0.06em;
-            padding: 0.4em;
         }
 
         h3 {
             font-size: 1em;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         h4 {
@@ -404,7 +486,6 @@ body {
 
         p {
             padding-top: 0.3em;
-            letter-spacing: 0.02em;
             line-height: 1.4;
         }
 
@@ -423,58 +504,17 @@ body {
                 width: 80%;
                 max-width: 960px;
             }
-            &.header {
-                height: 36px;
-                width: 100%;
-                font-size: 0.8em;
-                .row {
-                    display:inline-flex;
-                    width: 100%;
-                    margin: 0 auto;
-                    ul {
-                        padding: 0;
-                        width: 100%;
-                        margin: 0;
-                        text-align:right
-                    }
-                    li, span {
-                        margin: 10px 10px 0 0;
-                    }
-                    li:last-of-type {
-                        margin-right:0;
-                    }
-                }
-            }
             &.about {
                 padding: 150px 0;
                 .row {
-                    display:flex;
                     .name {
-                        text-align: right;
-                        flex-basis: 50%;
-                        padding: 2%;
-                        .icons {
-                            margin-top: 10px;
-                            a {
-                                [class^="icon-"], [class*=" icon-"] {
-                                    font-size: 1.5em;
-                                    margin-right: 0.3em;
-                                }
-                            }
-                        }
+                        width: 46%;
                     }
                     .story {
-                        flex-basis: 50%;
-                        padding: 2%;
+                        width: 46%;
                         margin-top: 137px;
-                        h2 {
-                            text-align:left;
-                            width: 100px;
-                            margin: 0;
-                            margin-bottom: 5px;
-                        }
-                        p {
-                            padding-bottom: .7em;
+                        h3 {
+                            font-size: 0.87em;
                         }
                     }
                 }
@@ -482,20 +522,16 @@ body {
             &.skills {
                 padding: 100px 0;
                 .row {
-                    display:flex;
-                    flex-direction: row;
+                    h2 {
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                    }
                     .column {
-                        width: 33.3%;
-                        padding: 1%;
                         ul {
-                            list-style:none;
-                            padding: 0;
-                            margin: 0px;
-                            text-align:center;
+                            text-align: center;
                             li {
                                 font-size: .9em;
-                                margin-bottom: 1em;
-                            }
+                                margin-bottom: 1em;                            }
                         }
                     }
                 }
@@ -503,41 +539,17 @@ body {
             &.work {
                 padding: 125px 0;
                 .row {
-                    display: flex;
-                    &.work-entry {
-                        margin-bottom: 30px;
-                    }
-                    .work-logo {
-                        width: 20%;
-                        text-align: center;
-                        padding-right: 1%;
-                        a {
-                            text-decoration: none;
-                        }
+                    h2 {
+                        margin: 0 auto;
+                        margin-bottom: 20px;
                     }
                     .description {
-                        width: 79%;
                         .company {
-                            width: 70%;
+                            width: 60%;
+                            margin-right: 4%;
                         }
                         .location {
-                            width: 30%;
-                        }
-                        ul {
-                            padding-left: 0;
-                        }
-                        ul.work-section-resp li {
-                            font-size: 0.9em;
-                            margin-bottom: 0.9em;
-                        }
-                        ul.work-section-skills {
-                            line-height: 1.1;
-                            li.skill {
-                                margin: 0 10px 0 0;
-                                color: $pink;
-                                font-size: 0.7em;
-                                line-height: 1;
-                            }
+                            width: 36%;
                         }
                     }
                 }
@@ -545,39 +557,31 @@ body {
             &.projects {
                 padding: 125px 0;
                 .row {
-                    display: flex;
-                    flex-wrap: wrap;
+                    h2 {
+                        margin: 0 auto;
+                        margin-bottom: 20px;
+                    }
                     .col {
                         width: 29.3%;
-                        padding: 2%;
-                        .project-img {
-                            line-height: 0;
-                            img {
-                                max-width:100%;
-                            }
-                        }
-                        .project-desc {
-                            padding: 7%;
-                            p {
-                                font-size: 0.9em;
-                            }
-                        }
                     }
                 }
             }
+
             &.connect {
                 padding: 125px 0;
-                text-align: center;
                 .row {
-                    display: flex;
-                }
-                .icons {
-                    margin-top: 10px;
-                    a {
-                        [class^="icon-"], [class*=" icon-"] {
-                            font-size: 2em;
-                            margin: 0.2em;
-                        }
+                    h2 {
+                        margin: 0 auto;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    .icons {
+                        margin: 0 auto;
+                        float: none;
+                        margin-top: 10px;
                     }
                 }
             }
