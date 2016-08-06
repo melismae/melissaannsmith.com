@@ -428,7 +428,7 @@ body {
     padding: 0.4em;
     border: 1px solid #eeeeee; }
   body h3 {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #444444;
     line-height: 1.4;
     font-weight: 400; }
@@ -520,8 +520,7 @@ body {
       flex-flow: row wrap; }
       body .section.about .row .name {
         text-align: left;
-        -ms-flex-preferred-size: 96%;
-        flex-basis: 96%;
+        width: 96%;
         padding: 2%; }
         body .section.about .row .name .icons {
           margin-top: 10px;
@@ -536,8 +535,7 @@ body {
               font-size: 1.5em;
               margin-right: 0.3em; }
       body .section.about .row .story {
-        -ms-flex-preferred-size: 96%;
-        flex-basis: 96%;
+        width: 96%;
         padding: 2%;
         margin-top: 15px; }
         body .section.about .row .story h2 {
@@ -638,7 +636,8 @@ body {
         body .section.projects .row .col .project-desc {
           padding: 7%;
           background-color: #444444;
-          color: #eeeeee; }
+          color: #eeeeee;
+          line-height: 0; }
           body .section.projects .row .col .project-desc h3 {
             color: #F26F65; }
           body .section.projects .row .col .project-desc p {
@@ -666,7 +665,7 @@ body {
             cursor: pointer;
             transition: 0.3s; }
       body .section.connect .row .icons {
-        margin: 10px 2%;
+        margin: 10px 1%;
         float: left; }
         body .section.connect .row .icons a {
           color: #353535;
@@ -679,163 +678,127 @@ body {
             font-size: 2em;
             margin: 0.2em; }
 
-@media (min-width: 1024px) {
-  body {
+@media (min-width: 641px) {
+  transition: 0.2s;
+  body h1 {
+    font-size: 3.7em;
+    text-align: right; }
+  body h2 {
+    font-size: 1.3em;
+    text-align: center; }
+  body h3 {
+    font-size: 0.8em; }
+  body h4 {
+    font-size: 1.4em;
+    text-align: right; }
+  body h5 {
+    font-size: 0.8em; }
+  body .section.about {
+    padding: 75px 0 35px; }
+    body .section.about .row .name {
+      text-align: right;
+      width: 40%;
+      padding: 2%; }
+    body .section.about .row .story {
+      width: 52%;
+      padding: 2%;
+      margin-top: 65px; }
+  body .section.skills .row .column {
+    width: 29.3%;
+    padding: 0% 2%; }
+    body .section.skills .row .column ul li {
+      font-size: .8em; }
+  body .section.work .row .work-logo {
+    display: block;
+    width: 20%; }
+    body .section.work .row .work-logo img {
+      max-width: 100%; }
+  body .section.work .row .description {
+    width: 76%;
+    margin-left: 4%; }
+    body .section.work .row .description .company {
+      width: 56%;
+      margin-right: 4%; }
+    body .section.work .row .description .location {
+      width: 40%; }
+  body .section.projects .row .col {
+    width: 46%;
+    padding: 2%; } }
+
+@media (min-width: 801px) {
+  transition: 0.2s;
+  body h1 {
+    font-size: 5em; }
+  body h2 {
+    font-size: 1.5em; }
+  body h3 {
     font-size: 1em;
-    letter-spacing: 0.02em; }
-    body h1 {
-      line-height: .9;
-      font-size: 5em; }
-    body h2 {
-      font-size: 1.5em;
-      text-align: center;
-      margin-bottom: 20px;
-      letter-spacing: 0.06em;
-      padding: 0.4em; }
-    body h3 {
-      font-size: 1em;
-      line-height: 1.4; }
-    body h4 {
-      font-size: 1.7em;
-      line-height: 1.3; }
-    body h5 {
-      line-height: 1.4;
-      font-size: 0.9em; }
-    body p {
-      padding-top: 0.3em;
-      letter-spacing: 0.02em;
-      line-height: 1.4; }
-    body button, body .button {
-      height: 38px;
-      padding: 0 30px;
-      margin: 15px 0;
-      line-height: 2;
-      font-size: 0.7em;
-      letter-spacing: 0.08em; }
-    body .section .container {
-      position: relative;
-      width: 80%;
-      max-width: 960px; }
-    body .section.header {
-      height: 36px;
-      width: 100%;
-      font-size: 0.8em; }
-      body .section.header .row {
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        width: 100%;
-        margin: 0 auto; }
-        body .section.header .row ul {
-          padding: 0;
-          width: 100%;
-          margin: 0;
-          text-align: right; }
-        body .section.header .row li, body .section.header .row span {
-          margin: 10px 10px 0 0; }
-        body .section.header .row li:last-of-type {
-          margin-right: 0; }
-    body .section.about {
-      padding: 150px 0; }
-      body .section.about .row {
-        display: -ms-flexbox;
-        display: flex; }
-        body .section.about .row .name {
-          text-align: right;
-          -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-          padding: 2%; }
-          body .section.about .row .name .icons {
-            margin-top: 10px; }
-            body .section.about .row .name .icons a [class^="icon-"], body .section.about .row .name .icons a [class*=" icon-"] {
-              font-size: 1.5em;
-              margin-right: 0.3em; }
-        body .section.about .row .story {
-          -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
-          padding: 2%;
-          margin-top: 137px; }
-          body .section.about .row .story h2 {
-            text-align: left;
-            width: 100px;
-            margin: 0;
-            margin-bottom: 5px; }
-          body .section.about .row .story p {
-            padding-bottom: .7em; }
-    body .section.skills {
-      padding: 100px 0; }
-      body .section.skills .row {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: row;
-        flex-direction: row; }
-        body .section.skills .row .column {
-          width: 33.3%;
-          padding: 1%; }
-          body .section.skills .row .column ul {
-            list-style: none;
-            padding: 0;
-            margin: 0px;
-            text-align: center; }
-            body .section.skills .row .column ul li {
-              font-size: .9em;
-              margin-bottom: 1em; }
-    body .section.work {
-      padding: 125px 0; }
-      body .section.work .row {
-        display: -ms-flexbox;
-        display: flex; }
-        body .section.work .row.work-entry {
-          margin-bottom: 30px; }
-        body .section.work .row .work-logo {
-          width: 20%;
-          text-align: center;
-          padding-right: 1%; }
-          body .section.work .row .work-logo a {
-            text-decoration: none; }
-        body .section.work .row .description {
-          width: 79%; }
-          body .section.work .row .description .company {
-            width: 70%; }
-          body .section.work .row .description .location {
-            width: 30%; }
-          body .section.work .row .description ul {
-            padding-left: 0; }
-          body .section.work .row .description ul.work-section-resp li {
-            font-size: 0.9em;
-            margin-bottom: 0.9em; }
-          body .section.work .row .description ul.work-section-skills {
-            line-height: 1.1; }
-            body .section.work .row .description ul.work-section-skills li.skill {
-              margin: 0 10px 0 0;
-              color: #F26F65;
-              font-size: 0.7em;
-              line-height: 1; }
-    body .section.projects {
-      padding: 125px 0; }
-      body .section.projects .row {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-        body .section.projects .row .col {
-          width: 29.3%;
-          padding: 2%; }
-          body .section.projects .row .col .project-img {
-            line-height: 0; }
-            body .section.projects .row .col .project-img img {
-              max-width: 100%; }
-          body .section.projects .row .col .project-desc {
-            padding: 7%; }
-            body .section.projects .row .col .project-desc p {
-              font-size: 0.9em; }
-    body .section.connect {
-      padding: 125px 0;
+    line-height: 1.3; }
+  body h4 {
+    font-size: 1.7em;
+    line-height: 1.3; }
+  body h5 {
+    line-height: 1.4;
+    font-size: 0.9em; }
+  body p {
+    padding-top: 0.3em;
+    line-height: 1.4; }
+  body button, body .button {
+    height: 38px;
+    padding: 0 30px;
+    margin: 15px 0;
+    line-height: 2;
+    font-size: 0.7em;
+    letter-spacing: 0.08em; }
+  body .section .container {
+    position: relative;
+    width: 80%;
+    max-width: 960px; }
+  body .section.about {
+    padding: 150px 0; }
+    body .section.about .row .name {
+      width: 46%; }
+    body .section.about .row .story {
+      width: 46%;
+      margin-top: 137px; }
+      body .section.about .row .story h3 {
+        font-size: 0.87em; }
+  body .section.skills {
+    padding: 100px 0; }
+    body .section.skills .row h2 {
+      margin: 0 auto;
+      margin-bottom: 20px; }
+    body .section.skills .row .column ul {
       text-align: center; }
-      body .section.connect .row {
-        display: -ms-flexbox;
-        display: flex; }
-      body .section.connect .icons {
-        margin-top: 10px; }
-        body .section.connect .icons a [class^="icon-"], body .section.connect .icons a [class*=" icon-"] {
-          font-size: 2em;
-          margin: 0.2em; } }
+      body .section.skills .row .column ul li {
+        font-size: .9em;
+        margin-bottom: 1em; }
+  body .section.work {
+    padding: 125px 0; }
+    body .section.work .row h2 {
+      margin: 0 auto;
+      margin-bottom: 20px; }
+    body .section.work .row .description .company {
+      width: 60%;
+      margin-right: 4%; }
+    body .section.work .row .description .location {
+      width: 36%; }
+  body .section.projects {
+    padding: 125px 0; }
+    body .section.projects .row h2 {
+      margin: 0 auto;
+      margin-bottom: 20px; }
+    body .section.projects .row .col {
+      width: 29.3%; }
+  body .section.connect {
+    padding: 125px 0; }
+    body .section.connect .row h2 {
+      margin: 0 auto;
+      margin-bottom: 20px; }
+    body .section.connect .row p {
+      text-align: center;
+      margin: 0 auto; }
+    body .section.connect .row .icons {
+      margin: 0 auto;
+      float: none;
+      margin-top: 10px; } }
