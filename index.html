@@ -2,10 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="Web Developer, Software Engineer, React, Redux, Portland, Female Developer, Woman Developer, Javascript">
+    <meta name="description" content="I am a Portland-based web developer with full-stack and startup experience and a recent front-end focus in ReactJS. I love collaborating across teams to build creative, scalable, user-friendly products and tackling new and exciting development challenges.">
+    <meta name="keywords" content="Web Developer, Software Engineer, React, Redux, Portland, Female Developer, Woman Developer, Javascript, Front End Web Developer, Front-End, Designer Developer">
     <meta name="author" content="Melissa Smith">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- social meta tags -->
+    <meta property="og:image" content="http://www.melissaannsmith.com/images/melissa-pic.jpg">
+    <meta property='og:title' content='Melissa Smith - Web Developer'/>
+    <meta property='og:description' content="I am a Portland-based web developer with full-stack and startup experience and a recent front-end focus in ReactJS. I love collaborating across teams to build creative, scalable, user-friendly products and tackling new and exciting development challenges." />
+    <meta property='og:url' content='http://www.melissaannsmith.com' />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="533">
 
     <title>Melissa Smith - Developer</title>
 
@@ -13,7 +22,11 @@
     <link rel="stylesheet" href="styles/css/icons.css">
     <link rel="stylesheet" href="styles/css/main.css">
 
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="http://www.melissaannsmith.com/images/favicon.png"/>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     <!-- color theme can be found at https://color.adobe.com/Miami-Deco-color-theme-8348960/ -->
 
   </head>
@@ -225,30 +238,36 @@
         <div class="row">
           <div class="col">
               <div class="project-img">
-                  <img src="images/gibbler.jpg" />
+                  <img src="images/predict16.png" class="predict"/>
+              </div>
+              <div class="project-desc">
+                <h3>Predict16</h3>
+                <p>A prediction aggregator for the 2016 presidential election. React/Redux front-end. Work in progress.</p>
+            </div>
+          </div>
+          <div class="col">
+              <div class="project-img">
+                  <img src="images/bouqs-portrait.png" class="bouqs"/>
               </div>
               <div class="project-desc">
                 <h3>The Bouqs</h3>
-                <p>Developed end-to-end features and other solutions, including <a href="https://www.thebouqs.com/business-gifts">multiple landing pages</a>, <a href="http://milled.com/thebouqs-com">emails</a>, and updating and migrating the <a href="https://www.thebouqs.com/blog/">blog</a>.</p>
+                <p>Developed end-to-end features and other solutions, including <a href="https://www.thebouqs.com/business-gifts">multiple landing pages</a>, <a href="http://milled.com/thebouqs-com">emails</a>, and collaborating on a new React/Redux front-end (seen above).</p>
             </div>
           </div>
           <div class="col">
-              <div class="project-img">
-                  <img src="http://placehold.it/600x500" />
+              <div class="project-img email">
+                  &lt;table&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello there<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/td&gt;<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                  &lt;/table&gt;<br>
               </div>
               <div class="project-desc">
-                <h3>Email Design</h3>
+                <h3>Email</h3>
                 <p>As a freelancer, I've designed and developed responsive email solutions, creating reusable templates in MailChimp. Currently interested in Foundation for Emails, and I always rely on Litmus for testing.</p>
             </div>
-          </div>
-          <div class="col">
-              <div class="project-img">
-                  <img src="http://placehold.it/600x500" />
-              </div>
-              <div class="project-desc">
-                <h3>Design</h3>
-                <p>Before moving in to web development, I was versatile graphic designer handling formal publications and document layouts like conference programs, government reports, and sponsorship decks as well as concert posters, social media graphics, ads, and more.</p>
-              </div>
           </div>
           <div class="col">
               <div class="project-img">
@@ -261,16 +280,16 @@
           </div>
           <div class="col">
               <div class="project-img">
-                  <img src="http://placehold.it/600x500" />
+                  <img src="images/gibbler.jpg" />
               </div>
               <div class="project-desc">
                 <h3>Gibblervision</h3>
-                <p>Final project for General Assembly's Front-End Web Development Course using a horizontal scrolling quiz, jQuery &amp; Javascript. Artwork/video stills created with Tachyons+ analog video gear.</p>
+                <p>Final project for General Assembly's Front-End Web Development Course using a horizontal scrolling quiz, jQuery &amp; Javascript. <a href="http://www.gibblervision.com" target="_blank">Artwork/video stills</a> created with Tachyons+ analog video gear.</p>
               </div>
           </div>
           <div class="col">
               <div class="project-img">
-                  <img src="http://placehold.it/600x500" />
+                  <img src="images/design.jpg" />
               </div>
               <div class="project-desc">
                 <h3>Design</h3>
@@ -297,6 +316,7 @@
             </div>
         </div>
     </div>
+
     <script>
         $( "#long" ).click(function() {
             $("#long").addClass('selected');
@@ -332,8 +352,17 @@
                 $(el).removeClass("selected");
             }, 2000);
         }
+    </script>
 
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-82171699-1', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

@@ -545,7 +545,8 @@ body {
           margin-bottom: 5px; }
         body .section.about .row .story h3 {
           cursor: pointer;
-          margin-top: 7px; }
+          margin-top: 7px;
+          font-size: 0.7em; }
           body .section.about .row .story h3 span.selected {
             border-bottom: 1px solid #C7A399; }
         body .section.about .row .story p {
@@ -631,13 +632,23 @@ body {
         padding: 2%; }
         body .section.projects .row .col .project-img {
           line-height: 0; }
+          body .section.projects .row .col .project-img.email {
+            line-height: 1;
+            background-color: #eeeeee;
+            padding: 20%;
+            font-weight: bolder; }
           body .section.projects .row .col .project-img img {
             max-width: 100%; }
+            body .section.projects .row .col .project-img img.predict {
+              background-color: #65A9F2; }
+            body .section.projects .row .col .project-img img.bouqs {
+              background-color: #C7A399; }
         body .section.projects .row .col .project-desc {
           padding: 7%;
           background-color: #444444;
           color: #eeeeee;
-          line-height: 0; }
+          line-height: 0;
+          margin-top: -1px; }
           body .section.projects .row .col .project-desc h3 {
             color: #F26F65; }
           body .section.projects .row .col .project-desc p {
@@ -679,7 +690,6 @@ body {
             margin: 0.2em; }
 
 @media (min-width: 641px) {
-  transition: 0.2s;
   body h1 {
     font-size: 3.7em;
     text-align: right; }
@@ -703,6 +713,8 @@ body {
       width: 52%;
       padding: 2%;
       margin-top: 65px; }
+      body .section.about .row .story h3 {
+        font-size: 0.8em; }
   body .section.skills .row .column {
     width: 29.3%;
     padding: 0% 2%; }
@@ -726,7 +738,6 @@ body {
     padding: 2%; } }
 
 @media (min-width: 801px) {
-  transition: 0.2s;
   body h1 {
     font-size: 5em; }
   body h2 {
@@ -761,13 +772,15 @@ body {
     body .section.about .row .story {
       width: 46%;
       margin-top: 137px; }
+      body .section.about .row .story h2 {
+        width: 100px; }
       body .section.about .row .story h3 {
         font-size: 0.87em; }
   body .section.skills {
     padding: 100px 0; }
     body .section.skills .row h2 {
       margin: 0 auto;
-      margin-bottom: 20px; }
+      margin-bottom: 30px; }
     body .section.skills .row .column ul {
       text-align: center; }
       body .section.skills .row .column ul li {

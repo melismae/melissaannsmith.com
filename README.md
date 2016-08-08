@@ -1,3 +1,5 @@
 # Portfolio site redo
 
-Because my computer's hard drive keeps crashing and this is what github is for. WIP.
+Hey - it's my site! Find the completed site online at [melissaannsmith.com].
+
+Created portfolio using Sass & Gulp, no CSS framework. jQuery for basic interaction.

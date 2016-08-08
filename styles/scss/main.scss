@@ -194,6 +194,7 @@ body {
                     h3 {
                         cursor: pointer;
                         margin-top: 7px;
+                        font-size: 0.7em;
                         span.selected {
                             border-bottom: 1px solid $mauve;
                         }
@@ -301,8 +302,20 @@ body {
                     padding: 2%;
                     .project-img {
                         line-height: 0;
+                        &.email {
+                            line-height: 1;
+                            background-color: #eeeeee;
+                            padding: 20%;
+                            font-weight: bolder;
+                        }
                         img {
                             max-width:100%;
+                            &.predict {
+                                background-color: $lightblue;
+                            }
+                            &.bouqs {
+                                background-color: $mauve;
+                            }
                         }
                     }
                     .project-desc {
@@ -310,6 +323,7 @@ body {
                         background-color: $darkgrey;
                         color: $lightgrey;
                         line-height: 0;
+                        margin-top: -1px;
                         h3 {
                             color: $pink;
                         }
@@ -407,6 +421,9 @@ body {
                         width: 52%;
                         padding: 2%;
                         margin-top: 65px;
+                        h3 {
+                            font-size: 0.8em;
+                        }
                     }
                 }
             }
@@ -460,7 +477,6 @@ body {
 
 @media (min-width: $breakpoint-desktop) {
     body {
-
         h1 {
             font-size: 5em;
         }
@@ -513,6 +529,9 @@ body {
                     .story {
                         width: 46%;
                         margin-top: 137px;
+                        h2 {
+                            width: 100px;
+                        }
                         h3 {
                             font-size: 0.87em;
                         }
